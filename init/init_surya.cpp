@@ -90,6 +90,7 @@ void vendor_load_properties() {
     std::string fingerprint;
     std::string flavor;
     std::string description;
+    std::string mod_device;
     std::string marketname;
 
     if (hwname == "karna") {
@@ -98,12 +99,14 @@ void vendor_load_properties() {
         device = "karna";
         fingerprint = "POCO/karna_in/karna:12/RKQ1.211019.001/V13.0.2.0.SJGINXM:user/release-keys";
         description = "karna_in-user 12 RKQ1.211019.001 V13.0.2.0.SJGINXM release-keys";
+        mod_device = "surya_in_global";
         marketname = "POCO X3";
     } else {
         name = "surya_global";
         device = "surya";
         fingerprint = "POCO/surya_global/surya:12/RKQ1.211019.001/V14.0.1.0.SJGMIXM:user/release-keys";
         description = "surya_global-user 12 RKQ1.211019.001 V14.0.1.0.SJGMIXM release-keys";
+        mod_device = "surya_global";
         marketname = "POCO X3 NFC";
 
         if (region == "THAI" || region == "THAI_PA")
@@ -119,6 +122,10 @@ void vendor_load_properties() {
     set_ro_product_prop("model", model);
     set_ro_product_prop("name", name);
     property_override("ro.build.description", description.c_str());
+    if (mod_device != "") {
+        property_override("ro.product.mod_device", mod_device.c_str());
+    }
+
     property_override("ro.build.flavor", flavor.c_str());
     property_override("ro.build.product", device.c_str());
     property_override("ro.boot.hardware.revision", hardware_revision.c_str());
