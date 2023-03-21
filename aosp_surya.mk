@@ -13,6 +13,7 @@ $(call inherit-product, device/xiaomi/surya/device.mk)
 
 # Inherit some common PixelExperience stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/extra/product.mk)
 
 PRODUCT_NAME := aosp_surya
 PRODUCT_DEVICE := surya
