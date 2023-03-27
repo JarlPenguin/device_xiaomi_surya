@@ -90,6 +90,8 @@ PRODUCT_COPY_FILES += \
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Camera
+$(call inherit-product-if-exists, device/xiaomi/surya-miuicamera/config.mk)
+
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
     android.hardware.camera.provider@2.4-impl \
