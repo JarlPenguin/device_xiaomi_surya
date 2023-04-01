@@ -370,6 +370,8 @@ PRODUCT_PACKAGES += \
     librmnetctl
 
 # Recovery
+TARGET_USES_AOSP_RECOVERY := true
+
 PRODUCT_PACKAGES += \
     fastbootd
 
