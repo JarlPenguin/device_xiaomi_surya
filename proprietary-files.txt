@@ -309,6 +309,10 @@ vendor/etc/camera/megviifacepp_0_5_2_model
 -vendor/lib64/libMegviiFacepp-0.5.2.so;MODULE=libMegviiFacepp-0.5.2_proprietary
 -vendor/lib64/libmegface.so;MODULE=libmegface_proprietary
 
+# Camera misc
+-vendor/lib64/android.hardware.camera.provider@2.4-legacy.so;MODULE=android.hardware.camera.provider@2.4-legacy_proprietary
+-vendor/lib64/vendor.qti.hardware.camera.device@3.5.so
+
 # Camera sensors
 -vendor/lib64/camera/com.qti.sensor.ofilm_hi259.so
 -vendor/lib64/camera/com.qti.sensor.ofilm_imx682.so
